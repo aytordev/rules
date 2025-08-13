@@ -14,13 +14,13 @@ This implementation focuses on creating a centralized source of truth for agent 
 
 Agent Rules are a structured approach to managing AI assistant configurations and behaviors in development environments. They categorize rules into different types:
 
-- **Soft Rules**: Guidelines and preferences that influence agent behavior but allow flexibility. Examples include:
+- **Advisory Rules**: Guidelines and preferences that influence agent behavior but allow flexibility. Examples include:
   - Code style preferences
   - Documentation standards
   - Project structure recommendations
   - Communication tone and approach
 
-- **Hard Rules**: Strict requirements that agents must follow without exception. Examples include:
+- **Mandatory Rules**: Strict requirements that agents must follow without exception. Examples include:
   - Security practices
   - Compliance requirements
   - Critical coding standards
@@ -36,7 +36,7 @@ This separation allows for better organization and ensures that critical require
 
 The repository focuses on the `rules/` directory, where you will find all agent rule definitions. You can add, modify, or remove rules within this directory as needed.
 
-### Rule Priorities
+## Rule Priorities
 
 All rules must include a numeric `priority` field to indicate their importance. Lower numbers represent higher priority:
 
@@ -45,12 +45,22 @@ All rules must include a numeric `priority` field to indicate their importance. 
 - `3`: Medium
 - `4`: Low
 
+### Type Definitions
+| Type         | Enforcement Behavior                     | Valid Priorities | Example Use Case                     |
+|--------------|------------------------------------------|------------------|--------------------------------------|
+| `mandatory`  | **Must be enforced. Failure = error.**    | 1, 2, 3          | `secure-auth`, `require_tls: true`    |
+| `advisory`   | **Recommended but optional.**             | 1, 2, 3, 4       | `code-comments`, `prefer_promise`     |
+
+> **Important**:
+> - `mandatory` rules **cannot** use `priority: 4` (invalid).
+> - `advisory` rules with `priority: 4` are *advisory suggestions* (e.g., "Use `async` for readability").
+
 This allows you to sort and filter rules by importance, and helps both humans and automation tools understand which rules are most critical.
 
 **Example rule definition:**
 ```yaml
 name: "secure-auth"
-type: "hard"
+type: "mandatory"
 priority: 1
 description: "Authentication must use secure protocols"
 rules:
