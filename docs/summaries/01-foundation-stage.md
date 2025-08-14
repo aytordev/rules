@@ -18,9 +18,20 @@
 ### Phase 3: Validated Mermaid Diagram
 **Final Diagram Code**
 ```mermaid
-graph LR
-    A[Agent: Planning Mode] -->|Proposal via artifacts| B[Memory Bank]
-    B -->|References| C[Human Review]
-    C -->|Approval| D[Agent: Execution Mode]
-    D -->|Updates| B
-    B --> E[All artifacts: features.md, fixes.md, ...]
+flowchart TD
+  A["Context Assessment: Select MVS (Core/Extensions)"] --> B["Proposal Generation"]
+  B --> C{"Security conflict?"}
+  C -->|Yes| D["Generate Task Plan<br/>+ Resolve Security Framework"]
+  C -->|No| E["Generate Task Plan"]
+  D --> E
+  E -->|Approved| F["Implementation: Execute & Update Memory Bank (Core MVS)"]
+  E -->|Rejected| B
+  F --> G["Evolution Review: Analyze Usage Patterns"]
+  G --> H{"Propose MVS Expansion?"}
+  H -->|Yes| I["Submit Expansion Proposal<br/>with Cost–Benefit"]
+  H -->|No| A
+  I --> J{"Team Approves?"}
+  J -->|Yes| K["Update MVS"]
+  J -->|No| A
+  K --> A
+```
