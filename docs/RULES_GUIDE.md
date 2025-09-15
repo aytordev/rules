@@ -1,5 +1,7 @@
 # Agent Rules Guide
 
+*See also: [Project README](../README.md) for repository overview and [CONTRIBUTING.md](../CONTRIBUTING.md) for contribution workflow.*
+
 This guide explains how to create, structure, and maintain `.rules` files for AI IDE integrations. Follow these best practices to ensure your rules are effective, consistent, and compatible across environments.
 
 ## What Are `.rules` Files?
@@ -16,6 +18,8 @@ A robust `.rules` file typically includes the following sections:
 - **actions**: What happens when the rule matches (e.g., suggest improvements, enforce changes)
 - **examples**: Before/after code samples to clarify intent
 - **metadata**: Priority, version, tags, and other organizational info
+
+For contribution workflow and commit conventions, refer to [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Writing Rules
 

@@ -73,6 +73,8 @@ To use and contribute to this repository, you'll need:
 
 For detailed information on rule authoring, integration, and best practices, see [docs/RULES_GUIDE.md](docs/RULES_GUIDE.md).
 
+For contribution workflow and commit conventions, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Contributing
 
 Contributions are welcome! To add a new `.rules` file:

@@ -2,6 +2,9 @@
 
 This guide outlines the workflow for managing and updating the agent rules repository. Contributors must follow best practices to ensure consistency and quality across all IDE integrations.
 
+For a repository overview, see [README.md](./README.md).
+For detailed rule authoring guidance, see [docs/RULES_GUIDE.md](./docs/RULES_GUIDE.md).
+
 ## 📋 Table of Contents
 
 - [Guidelines](#-guidelines)
@@ -222,7 +225,7 @@ When contributing to this framework:
 ## 🤝 Getting Help
 
 For any questions or issues:
-1. First, check the README and documentation in `docs/`
+1. First, check the [README.md](./README.md) and documentation in [docs/RULES_GUIDE.md](./docs/RULES_GUIDE.md)
 2. Search existing issues and discussions
 3. For rule-specific questions, consult the relevant IDE documentation
 4. Open a new issue with detailed information and reproduction steps
