@@ -36,9 +36,9 @@ Example:
 ```yaml
 filters:
   - type: file_extension
-    pattern: "\\.ts$|\\.js$"
+    pattern: "\\.ext$"
   - type: content
-    pattern: "(?s)class.*?\\{|interface.*?\\{|function.*?\\{"
+    pattern: "someRegexPattern"
 ```
 
 ## Validating Rules
@@ -61,12 +61,58 @@ Example:
 actions:
   - type: suggest
     message: |
-      When writing code, follow these SOLID principles:
-      1. Single Responsibility Principle (SRP)
-      2. Open/Closed Principle (OCP)
-      3. Liskov Substitution Principle (LSP)
-      4. Interface Segregation Principle (ISP)
-      5. Dependency Inversion Principle (DIP)
+      Please follow the recommended coding guidelines:
+      - Keep functions small and focused
+      - Use meaningful variable names
+      - Avoid duplicated code
+```
+
+## Example Rule
+
+### Simple JSON Example
+
+```json
+{
+  "name": "example-rule",
+  "description": "Describe what this rule enforces",
+  "severity": "warning",
+  "pattern": "somePattern"
+}
+```
+
+### Generic YAML Example
+
+```yaml
+name: generic_rule
+description: Enforces a generic coding guideline
+filters:
+  - type: file_extension
+    pattern: "\\.ext$"
+  - type: content
+    pattern: "someRegexPattern"
+
+actions:
+  - type: suggest
+    message: |
+      Please follow the recommended coding guidelines:
+      - Keep functions small and focused
+      - Use meaningful variable names
+      - Avoid duplicated code
+
+examples:
+  - input: |
+      # Before: Not following guideline
+      def doStuff(x): print(x)
+    output: |
+      # After: Following guideline
+      def print_value(value):
+          print(value)
+metadata:
+  priority: medium
+  version: 1.0
+  tags:
+    - generic
+    - best-practices
 ```
 
 ## Best Practices
