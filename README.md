@@ -1,12 +1,6 @@
-rules/README.md
-```
-<div align="center">
-<h1>
-<img width="100" src="assets/rules-logo.png" /> <br>
-</h1>
-</div>
+![Project Logo](assets/rules-logo.png)
 
-# aytordev's AI IDE Rules Reference Repository
+# aytordevs-ai-ide-rules-reference-repository
 
 This is a curated, reference collection of `.rules` files designed to help you enhance your AI experience across projects and technologies. Inspired by [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules), this repository centralizes best practices, project-level instructions, and context for code generation and understanding—making your IDE smarter and your workflow more consistent.
 
@@ -29,17 +23,15 @@ Place a `.rules` file in your project's root directory to unlock these benefits.
 
 ```
 .
-├── assets/                         # Logos, images, and documentation resources
-│   └── rules-logo.png              # Project logo and branding
-│
-├── docs/                           # Extended documentation
-│   └── RULES_GUIDE.md              # Comprehensive guide to rule authoring
-│
-├── .rules                          # Contribution guidelines and global rules
-├── .gitignore                      # Git ignore rules
-├── CONTRIBUTING.md                 # Contribution guidelines
-├── LICENSE                         # Project license
-└── README.md                       # Project documentation
+├── assets/           # Logos, images, and documentation resources
+│   └── rules-logo.png
+├── docs/             # Extended documentation
+│   └── RULES_GUIDE.md
+├── .rules            # Contribution guidelines and global rules
+├── .gitignore        # Git ignore rules
+├── CONTRIBUTING.md   # Contribution guidelines
+├── LICENSE           # Project license
+└── README.md         # Project documentation
 ```
 
 ### Key Directories
