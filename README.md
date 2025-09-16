@@ -1,6 +1,11 @@
-![Project Logo](assets/rules-logo.png)
+![Project Logo]()
+<div align="center">
+<h1>
+<img width="100" src="assets/rules-logo.webp" /> <br>
+</h1>
+</div>
 
-# aytordevs-ai-ide-rules-reference-repository
+# aytordev's Rules References Repository
 
 This is a curated, reference collection of `.rules` files designed to help you enhance your AI experience across projects and technologies. Inspired by [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules), this repository centralizes best practices, project-level instructions, and context for code generation and understanding—making your IDE smarter and your workflow more consistent.
 
